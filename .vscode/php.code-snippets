@@ -1,0 +1,128 @@
+{
+	"Test Generator": {
+		"prefix": "test",
+		"body": [
+			"<?php",
+			"",
+			"namespace ${RELATIVE_FILEPATH/^(?:.*[\\\\\\/])?(tests)(?=[\\\\\\/])|[\\\\\\/][^\\\\\\/]*$|([\\\\\\/])/${1:+NystronSolar\\\\FakerSolarTests}${2:+\\\\}/g};",
+			"",
+			"use PHPUnit\\Framework\\TestCase;",
+			"",
+			"class $TM_FILENAME_BASE extends TestCase",
+			"{",
+			"    $0",
+			"}",
+		],
+		"description": "Creates a new Test Class"
+	},
+	"Class Generator": {
+		"prefix": "class",
+		"body": [
+			"<?php",
+			"",
+			"namespace ${RELATIVE_FILEPATH/^(?:.*[\\\\\\/])?(src)(?=[\\\\\\/])|[\\\\\\/][^\\\\\\/]*$|([\\\\\\/])/${1:+NystronSolar\\\\FakerSolar}${2:+\\\\}/g};",
+			"",
+			"class $TM_FILENAME_BASE",
+			"{",
+			"    $0",
+			"}",
+		],
+		"description": "Creates a new Class"
+	},
+	"Trait Generator": {
+		"prefix": "trait",
+		"body": [
+			"<?php",
+			"",
+			"namespace ${RELATIVE_FILEPATH/^(?:.*[\\\\\\/])?(src)(?=[\\\\\\/])|[\\\\\\/][^\\\\\\/]*$|([\\\\\\/])/${1:+NystronSolar\\\\FakerSolar}${2:+\\\\}/g};",
+			"",
+			"trait $TM_FILENAME_BASE",
+			"{",
+			"    $0",
+			"}",
+		],
+		"description": "Creates a new Trait"
+	},
+	"Interface Generator": {
+		"prefix": "interface",
+		"body": [
+			"<?php",
+			"",
+			"namespace ${RELATIVE_FILEPATH/^(?:.*[\\\\\\/])?(src)(?=[\\\\\\/])|[\\\\\\/][^\\\\\\/]*$|([\\\\\\/])/${1:+NystronSolar\\\\FakerSolar}${2:+\\\\}/g};",
+			"",
+			"interface $TM_FILENAME_BASE",
+			"{",
+			"    $0",
+			"}",
+		],
+		"description": "Creates a new Interface"
+	},
+	"Enum Generator": {
+		"prefix": "enum",
+		"body": [
+			"<?php",
+			"",
+			"namespace ${RELATIVE_FILEPATH/^(?:.*[\\\\\\/])?(src)(?=[\\\\\\/])|[\\\\\\/][^\\\\\\/]*$|([\\\\\\/])/${1:+NystronSolar\\\\FakerSolar}${2:+\\\\}/g};",
+			"",
+			"enum $TM_FILENAME_BASE",
+			"{",
+			"    $0",
+			"}",
+		],
+		"description": "Creates a new Enum"
+	},
+	"Test Function": {
+		"prefix": [
+			"testf",
+		],
+		"body": [
+			"public function test$1(): void",
+			"{",
+			"    $2",
+			"}",
+		],
+		"description": "Creates an Test Function",
+	},
+	"Constructor": {
+		"prefix": [
+			"cons",
+		],
+		"body": [
+			"public function __construct($1)",
+			"{",
+			"    $2",
+			"}",
+		],
+		"description": "Creates an Constructor Method",
+	},
+	"Constructor Parameter": {
+		"prefix": [
+			"consp",
+		],
+		"body": [
+			"public function __construct(",
+			"    public readonly $1 $$2",
+			") {",
+			"}",
+		],
+		"description": "Creates an Constructor Method with a public readonly parameter",
+	},
+	"Class Property Generator": {
+		"prefix": [
+			"prop",
+			"property"
+		],
+		"body": [
+			"public readonly $1 $$2;",
+		]
+	},
+	"Method Argument Generator": {
+		"prefix": [
+			"arg",
+			"argument"
+		],
+		"body": [
+			"$1 $$2",
+		]
+	}
+}
