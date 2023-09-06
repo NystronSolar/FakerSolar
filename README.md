@@ -6,7 +6,7 @@ Allow [fakerphp/faker](https://github.com/fakerphp/faker) to generate fake Solar
 
 Add the FakerSOlar library to your `composer.json` file:
 
-```
+```bash
 composer require nystronsolar/faker-solar
 ```
 
@@ -32,7 +32,8 @@ composer install
 ```
 
 After you did the changes, run the PHP CS Fixer, Psalm and PHPUnit.
-```
+
+```bash
 php vendor/bin/php-cs-fixer fix --verbose
 php vendor/bin/psalm
 php vendor/bin/phpunit
