@@ -1,0 +1,33 @@
+{
+    "name": "nystronsolar/faker-solar",
+    "description": "Allow Faker to generate fake Solar data.",
+    "license": "MIT",
+    "homepage": "https://github.com/NystronSolar/FakerSolar",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "NystronSolar\\FakerSolar\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "NystronSolar\\FakerSolarTests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "TheDevick",
+            "email": "erick@bilhalba.com.br",
+            "homepage": "https://TheDevick.vercel.app"
+        }
+    ],
+    "require": {
+        "fakerphp/faker": "^1.23"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.3",
+        "symfony/var-dumper": "^6.3",
+        "vimeo/psalm": "^5.15",
+        "friendsofphp/php-cs-fixer": "^3.25"
+    }
+}
